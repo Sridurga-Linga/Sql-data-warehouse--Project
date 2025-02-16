@@ -1,7 +1,10 @@
 /*************
-Check if the data base exists or not if not created the DataWarehouse data bases and Schemas bronze, silver, gold
+Check if the data base exists or not if it exists drop the data bases and create the DataWarehouse data bases and 
+also creating schemas bronze, silver, gold
 
 ************/
+
+
 IF EXISTS (SELECT name FROM sys.databases WHERE name = 'DataWarehouse')
 BEGIN
     DROP DATABASE DataWarehouse;
